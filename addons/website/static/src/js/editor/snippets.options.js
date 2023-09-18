@@ -2338,7 +2338,9 @@ const VisibilityPageOptionUpdate = options.Class.extend({
         // toggled (otherwise it would be about editing an element which
         // is actually never displayed on the page).
         const widget = this._requestUserValueWidgets(this.showOptionWidgetName)[0];
-        widget.enable();
+        
+         widget.enable();
+   
     },
 
     //--------------------------------------------------------------------------
@@ -2350,6 +2352,8 @@ const VisibilityPageOptionUpdate = options.Class.extend({
      */
     async visibility(previewMode, widgetValue, params) {
         const show = (widgetValue !== 'hidden');
+        
+        
         await new Promise((resolve, reject) => {
             this.trigger_up('action_demand', {
                 actionName: 'toggle_page_option',
@@ -2359,6 +2363,7 @@ const VisibilityPageOptionUpdate = options.Class.extend({
             });
         });
         this.trigger_up('snippet_option_visibility_update', {show: show});
+        
     },
 
     //--------------------------------------------------------------------------

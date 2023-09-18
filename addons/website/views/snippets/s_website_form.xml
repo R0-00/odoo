@@ -149,6 +149,7 @@
                 <we-select data-name="hidden_condition_no_text_opt" data-attribute-name="visibilityComparator" data-no-preview="true">
                     <we-button data-select-data-attribute="selected">Is equal to</we-button>
                     <we-button data-select-data-attribute="!selected">Is not equal to</we-button>
+                   
                 </we-select>
                 <we-select data-name="hidden_condition_text_opt" data-attribute-name="visibilityComparator" data-no-preview="true">
                     <!-- str comparator possibilities -->
@@ -187,6 +188,8 @@
                     <!-- file comparator possibilities -->
                     <we-button data-select-data-attribute="fileSet">Is set</we-button>
                     <we-button data-select-data-attribute="!fileSet">Is not set</we-button>
+                 
+                    
                 </we-select>
             </we-row>
             <we-select class="o_we_large" data-name="hidden_condition_no_text_opt" data-attribute-name="visibilityCondition" data-no-preview="true">
