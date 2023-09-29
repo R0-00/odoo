@@ -637,6 +637,8 @@ odoo.define('website.s_website_form', function (require) {
                 }
 
                 const formData = new FormData(this.$target[0]);
+                if(['contains', '!contains'].includes(comparator))
+                    return this._compareTo(comparator, formData.getAll(dependencyName).toString(), visibilityCondition, between)
                 const currentValueOfDependency = formData.get(dependencyName);
                 return this._compareTo(comparator, currentValueOfDependency, visibilityCondition, between);
             };
